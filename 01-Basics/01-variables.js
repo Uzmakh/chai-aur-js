@@ -1,24 +1,32 @@
-const accountId = 144553
-let accountEmail = "helloworld@google.com"
-var accountPassword = "12345"
-accountCity = "Multan"
-let accountState;
+const accountId = 144553;
+let accountEmail = "helloworld@google.com";
+var accountPassword = "12345";
+var accountCity = "Multan";
+let accountState; //declared not initialized
 
- //accountId = 2 // not allowed
+//accountId = 2 // not allowed - nodejs would not allow this(with const keyword, you can't change the value)
 
- accountEmail = "hc@hc.com"
-accountPassword = "21212121"
-accountCity = "Lahore"
+accountEmail = "hc@hc.com";
+accountPassword = "21212121";
+accountCity = "Lahore";
 
- console.log("accountId")
+console.log(accountId);
+console.log(accountEmail);
+console.log(accountPassword);
+console.log(accountCity);
 
- /*
+/*
 Prefer not to use var
-because of issue in block scope and functional scope
+because of the issues in block scope and functional scope i.e., {}
 */
- 
- console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
 
+console.table([
+  accountId,
+  accountEmail,
+  accountPassword,
+  accountCity,
+  accountState,
+]);
 
 //  summary
 /*
