@@ -17,7 +17,7 @@ let state;
 // bigint
 // string => ""
 // boolean => true/false
-// null => standalone value - empty container-not received yet to fill in
+// null => standalone value - empty container-not received any value yet to fill in
 // undefined => declared variable but not initialized - not assigned value
 // symbol => unique  (used in React to get uniqueness while creating components)
 
