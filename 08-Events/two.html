@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Events</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <h3>Js Events</h3>
+    <h4>setTimeout()</h4>
+    <h4>clearTimeout()</h4>
+    <button id="stop">Stop</button>
+
+    <script>
+      // call back function
+      // executes for one time
+      //   Basic syntax
+      setTimeout(function () {
+        console.log("Hitesh");
+      }, 5000);
+      // Alternatively,declare this function in a variable and use this variable a aReference of function
+      const sayHitesh = function () {
+        console.log("Hitesh");
+      };
+      const changeText = function () {
+        const headingOne = document.querySelector("h1");
+        headingOne.innerHTML = "Js Best Series";
+      };
+      //   document.querySelector("h1").innerHTML = "Js Best Series";
+      setTimeout(sayHitesh, 5000);
+      //   setTimeout(changeText, 5000);
+
+      //   How to stop this function to execute
+      const changeMe = setTimeout(changeText, 5000);
+      // it is using reference of setTimeout-changeText
+      //   clearTimeout(changeMeNot); //it will not change- never change
+
+      //   right way to do this
+      const button = document.querySelector("#stop");
+      button.addEventListener("click", function () {
+        clearTimeout(changeMe);
+        console.log("STOPED!");
+      });
+    </script>
+  </body>
+</html>

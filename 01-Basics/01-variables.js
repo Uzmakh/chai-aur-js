@@ -4,7 +4,7 @@ var accountPassword = "12345";
 var accountCity = "Multan";
 let accountState; //declared not initialized
 
-//accountId = 2 // not allowed - nodejs would not allow this(with const keyword, you can't change the value)
+//accountId = 2 // not allowed - nodejs would not allow to change the value of constant(with const keyword, you can't change the value)
 
 accountEmail = "hc@hc.com";
 accountPassword = "21212121";
@@ -15,11 +15,6 @@ console.log(accountEmail);
 console.log(accountPassword);
 console.log(accountCity);
 
-/*
-Prefer not to use var
-because of the issues in block scope and functional scope i.e., {}
-*/
-
 console.table([
   accountId,
   accountEmail,
@@ -27,6 +22,12 @@ console.table([
   accountCity,
   accountState,
 ]);
+
+/*
+Prefer not to use var
+because of the issues in block scope and functional scope i.e., {}
+*/
+// With var, developers can't change the values, so let is preferred now to declare variables.
 
 //  summary
 /*
