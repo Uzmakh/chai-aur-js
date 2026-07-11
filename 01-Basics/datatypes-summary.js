@@ -32,7 +32,7 @@ const myFunction = function () {
   console.log("Hello world");
 }
 
-// ? to know the data type of any value
+//? to know the data type of any value
 
 console.log(typeof anotherId);
 
