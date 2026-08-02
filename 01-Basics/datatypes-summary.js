@@ -37,3 +37,31 @@ const myFunction = function () {
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// ! Tutorial-10
+// * Stack(Primitives) and Heap(Non-Primitives)
+
+// * Stack(Primitives)
+let myName = "Yumna Khalid";
+let anotherName = myName;
+
+// console.log(myName);
+// console.log(anotherName);
+
+anotherName = "Ayesha Khalid";
+
+console.log(myName);
+console.log(anotherName);
+
+// * Heap(Non-Primitives)
+let userOne = {
+  email: "example@google.com",
+  contact : "03142347658"
+}
+
+let userTwo = userOne;
+userTwo.email="test@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
