@@ -49,7 +49,7 @@ const obj4={5:"d",6:"e"}
 const obj3={...obj1,...obj2,...obj4}
 
 // console.log(obj3)  //{ '1': 'a', '2': 'b', '3': 'a', '4': 'c' }
-console.log(obj3)   //{ '1': 'a', '2': 'b', '3': 'a', '4': 'c', '5': 'd', '6': 'e' }
+// console.log(obj3)   //{ '1': 'a', '2': 'b', '3': 'a', '4': 'c', '5': 'd', '6': 'e' }
 
 
 // Receiving values from database, we get this syntax,
@@ -70,18 +70,55 @@ const users = [
 
 users[1].email
 
-console.log(tinderUser)
+// console.log(tinderUser)
 
 
 // very important while working in database objects
-console.log(Object.keys(tinderUser));  //[ 'id', 'name', 'isLoggedIn' ]
+// console.log(Object.keys(tinderUser));  //[ 'id', 'name', 'isLoggedIn' ]
 
-console.log(Object.values(tinderUser));  //[ '123abc', 'Sammy', false ]
+// console.log(Object.values(tinderUser));  //[ '123abc', 'Sammy', false ]
 
-console.log(Object.entries(tinderUser));    //[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false] ]
+// console.log(Object.entries(tinderUser));    //[ [ 'id', '123abc' ], [ 'name', 'Sammy' ], [ 'isLoggedIn', false] ]
 
 
 // when value does not exist
-console.log(tinderUser.hasOwnProperty('isLoggedIn'))   //true
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'))   //true
 
 //MUST know about object prototypes in console
+
+//? Object Destructuring (used when accessing object values)
+const course = {
+  courseName: "js in hindi",
+  price: "999",
+  courseInstructor: "hitesh"
+}
+// simple way to access object value
+console.log(course.courseName)
+// Accessing object value with destructuring
+const { courseName } = course;
+console.log(courseName)
+
+// how destructuring used in React
+const navbar = ({company}) => {
+  
+}
+
+
+//? JSON API
+
+// {
+//     "name": "hitesh",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }
+
+// real API url
+// https://api.github.com/users/hiteshchoudhary
+
+// I will use fetch method of JS, to access it, I will get the data in response
+// After converting JSON into Object, I will access its values
+
+// randomuser.me API response received can be read in JSON Formatter
+[
+  {},{},{}
+]
